@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sellout
+  namespace: sellout
+spec:
+  schedule: "*/15 * * * *"
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: sellout
+              image: ghcr.io/miguelsdl/sellout:dev
+              envFrom:
+                - secretRef:
+                    name: sellout-db
+              env:
+                - name: INPUT_DIR
+                  value: "/Volumes/received"
+                - name: DONE_DIR
+                  value: "/Volumes/done"
+              volumeMounts:
+                - name: received
+                  mountPath: /Volumes/received
+                - name: done
+                  mountPath: /Volumes/done
+          volumes:
+            - name: received
+              hostPath:
+                path: /Volumes/received
+                type: Directory
+            - name: done
+              hostPath:
+                path: /Volumes/done
+                type: Directory
