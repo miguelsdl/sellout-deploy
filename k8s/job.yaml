@@ -22,7 +22,7 @@ spec:
                 - name: DIR_BASE
                   value: "/Volumes"
                 - name: DIR_ENTRADA
-                  value: "reveived"
+                  value: "received"
                 - name: DIR_SALIDA
                   value: "done2"
                 - name: INPUT_DIR
