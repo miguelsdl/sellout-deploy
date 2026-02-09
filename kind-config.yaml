@@ -1,0 +1,11 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: /Volumes/received
+        containerPath: /Volumes/received
+      - hostPath: /Volumes/done
+        containerPath: /Volumes/done
+      - hostPath: /Volumes/done2
+        containerPath: /Volumes/done2
