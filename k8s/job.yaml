@@ -19,10 +19,16 @@ spec:
                 - secretRef:
                     name: sellout-db
               env:
+                - name: DIR_BASE
+                  value: "/Volumes"
+                - name: DIR_ENTRADA
+                  value: "reveived"
+                - name: DIR_SALIDA
+                  value: "done2"
                 - name: INPUT_DIR
-                  value: "/Volumes/received"
+                  value: "/Volumes/archivos"
                 - name: DONE_DIR
-                  value: "/Volumes/done"
+                  value: "/Volumes/resultados"
               volumeMounts:
                 - name: received
                   mountPath: /Volumes/received
@@ -41,10 +47,10 @@ env:
   - name: DIR_BASE
     value: "/Volumes"
   - name: DIR_ENTRADA
-    value: "received"
+    value: "archivos"
   - name: DIR_SALIDA
-    value: "done2"
+    value: "resultados"
   - name: INPUT_DIR
-    value: "/Volumes/received"
+    value: "/Volumes/archivos"
   - name: DONE_DIR
-    value: "/Volumes/done2"
+    value: "/Volumes/resultados"
