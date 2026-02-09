@@ -37,3 +37,14 @@ spec:
               hostPath:
                 path: /Volumes/done
                 type: Directory
+env:
+  - name: DIR_BASE
+    value: "/Volumes"
+  - name: DIR_ENTRADA
+    value: "received"
+  - name: DIR_SALIDA
+    value: "done2"
+  - name: INPUT_DIR
+    value: "/Volumes/received"
+  - name: DONE_DIR
+    value: "/Volumes/done2"
