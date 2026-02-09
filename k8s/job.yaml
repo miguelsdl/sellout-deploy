@@ -43,14 +43,3 @@ spec:
               hostPath:
                 path: /Volumes/done
                 type: Directory
-env:
-  - name: DIR_BASE
-    value: "/Volumes"
-  - name: DIR_ENTRADA
-    value: "archivos"
-  - name: DIR_SALIDA
-    value: "resultados"
-  - name: INPUT_DIR
-    value: "/Volumes/archivos"
-  - name: DONE_DIR
-    value: "/Volumes/resultados"
