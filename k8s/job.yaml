@@ -13,7 +13,6 @@ spec:
           restartPolicy: Never
           containers:
             - name: sellout
-#              image: ghcr.io/miguelsdl/sellout:dev
               image: sellout:dev
               imagePullPolicy: IfNotPresent
               envFrom:
