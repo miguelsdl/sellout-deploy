@@ -37,6 +37,7 @@ spec:
               hostPath:
                 path: /Volumes/done
                 type: Directory
+
 env:
   - name: DIR_BASE
     value: "/Volumes"
