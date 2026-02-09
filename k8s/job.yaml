@@ -4,7 +4,7 @@ metadata:
   name: sellout
   namespace: sellout
 spec:
-  schedule: "* * * * *"
+  schedule: "*/15 * * * *"
   jobTemplate:
     spec:
       backoffLimit: 0
