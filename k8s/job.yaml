@@ -30,8 +30,6 @@ spec:
                   mountPath: /Volumes/received
                 - name: done2
                   mountPath: /Volumes/done2
-                - name: done
-                  mountPath: /Volumes/done
           volumes:
             - name: received
               hostPath:
@@ -40,8 +38,4 @@ spec:
             - name: done2
               hostPath:
                 path: /Volumes/done2
-                type: Directory
-            - name: done
-              hostPath:
-                path: /Volumes/done
                 type: Directory
