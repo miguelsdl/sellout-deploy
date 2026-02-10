@@ -34,8 +34,8 @@ spec:
             - name: archivos
               hostPath:
                 path: /Volumes/archivos
-                type: Directory
+                type: DirectoryOrCreate
             - name: done
               hostPath:
                 path: /Volumes/done
-                type: Directory
+                type: DirectoryOrCreate
