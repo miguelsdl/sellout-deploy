@@ -22,18 +22,18 @@ spec:
                 - name: DIR_BASE
                   value: "/Volumes"
                 - name: DIR_ENTRADA
-                  value: "archivos"
+                  value: "received"
                 - name: DIR_SALIDA
                   value: "done2"
               volumeMounts:
-                - name: archivos
-                  mountPath: /Volumes/archivos
+                - name: received
+                  mountPath: /Volumes/received
                 - name: done2
                   mountPath: /Volumes/done2
           volumes:
-            - name: archivos
+            - name: received
               hostPath:
-                path: /Volumes/archivos
+                path: /Volumes/received
                 type: DirectoryOrCreate
             - name: done2
               hostPath:
