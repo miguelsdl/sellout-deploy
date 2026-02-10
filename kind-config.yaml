@@ -9,3 +9,5 @@ nodes:
         containerPath: /Volumes/done
       - hostPath: /Volumes/done2
         containerPath: /Volumes/done2
+      - hostPath: /Volumes/archivos
+        containerPath: /Volumes/archivos
